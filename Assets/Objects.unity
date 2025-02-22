@@ -1863,9 +1863,9 @@ GameObject:
   - component: {fileID: 1743792458}
   - component: {fileID: 1743792457}
   - component: {fileID: 1743792456}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Countdown Text
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
