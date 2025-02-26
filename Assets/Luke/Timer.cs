@@ -1,36 +1,32 @@
 using UnityEngine;
-using UnityEngine.UI; // If using Text UI
-using TMPro; // If using TextMeshPro UI
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText; // Drag & drop a TextMeshPro UI element here
+    public TextMeshProUGUI timerText; // Reference to UI Text
     private float elapsedTime = 0f;
     private bool isRunning = true;
+
+    public float ElapsedTime => elapsedTime; // Public property to get elapsed time
 
     void Update()
     {
         if (isRunning)
         {
             elapsedTime += Time.deltaTime;
-            UpdateTimerUI();
+            UpdateTimerText();
         }
     }
 
-    void UpdateTimerUI()
+    void UpdateTimerText()
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        int milliseconds = Mathf.FloorToInt((elapsedTime * 100) % 100);
-
-        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timerText.text = $"{minutes:00}:{seconds:00}";
     }
 
-    public void StartTimer() => isRunning = true;
-    public void StopTimer() => isRunning = false;
-    public void ResetTimer()
+    public void StopTimer()
     {
-        elapsedTime = 0f;
-        UpdateTimerUI();
+        isRunning = false; // Stop the timer
     }
 }
