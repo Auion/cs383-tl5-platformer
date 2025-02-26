@@ -22,6 +22,12 @@ public class FlyingBone : MonoBehaviour
         randomAngle = Random.Range(0f, 360f);
         rotationSpeed = Random.Range(15f, 25f);
         transform.Rotate(0, 0, Random.Range(0f, 360f));
+
+        // Correct rendering
+        transform.position = new Vector3(transform.position.x, transform.position.y, -5f);
+
+        // Set death alarm
+        Invoke("Death", 8f);
     }
 
     void FixedUpdate()
@@ -30,5 +36,14 @@ public class FlyingBone : MonoBehaviour
         Vector2 NewDirection = new Vector2(Mathf.Cos(Radians), Mathf.Sin(Radians));
         _rb.AddForce(NewDirection * 10f, ForceMode2D.Force);
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
+        if (transform.position.x > 12 || transform.position.x < -12 || transform.position.y > 18 || transform.position.y < -7)
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        Destroy(gameObject);
     }
 }

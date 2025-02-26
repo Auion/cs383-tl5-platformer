@@ -39,6 +39,9 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float _energy_max = 60000f;
     [SerializeField] private float _energy = 60000f;
 
+    // Health 9 lives!
+    private float health = 9f;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -201,5 +204,26 @@ public class PlayerScript : MonoBehaviour
     {
         isRoofed = Physics2D.Raycast(transform.position, Vector2.up, roofCheckDistance, groundMask);
         Debug.DrawRay(transform.position, Vector2.up * roofCheckDistance, Color.red);
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            TakeDamage();
+        }
+    }
+
+    void TakeDamage()
+    {
+        health -= 1;
+        if (health <= 0)
+        {
+            Death();
+        }
+    }
+
+    void Death()
+    {
+        Destroy(gameObject);
     }
 }

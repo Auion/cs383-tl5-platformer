@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|c:\\users\\gabri\\documents\\github\\cs383-tl5-platformer\\assets\\timer\\countdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|solutionrelative:assets\\timer\\countdown.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|c:\\users\\gabri\\documents\\github\\cs383-tl5-platformer\\assets\\gabriel\\scripts\\enemies\\flyingbone\\flyingbonescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|solutionrelative:assets\\gabriel\\scripts\\enemies\\flyingbone\\flyingbonescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\assets\\gabriel\\scripts\\enemies\\enemyspawner\\enemyspawnerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|solutionrelative:assets\\gabriel\\scripts\\enemies\\enemyspawner\\enemyspawnerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\assets\\gabriel\\scripts\\player\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D62309DE-115D-9389-65B9-7FB123CCD032}|Assembly-CSharp.csproj|solutionrelative:assets\\gabriel\\scripts\\player\\playerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Countdown.cs",
-              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Timer\\Countdown.cs",
-              "RelativeDocumentMoniker": "Assets\\Timer\\Countdown.cs",
-              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Timer\\Countdown.cs",
-              "RelativeToolTip": "Assets\\Timer\\Countdown.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "PlayerScript.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Player\\PlayerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Gabriel\\Scripts\\Player\\PlayerScript.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Player\\PlayerScript.cs",
+              "RelativeToolTip": "Assets\\Gabriel\\Scripts\\Player\\PlayerScript.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwCkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T00:28:10.406Z",
+              "WhenOpened": "2025-02-26T20:37:26.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FlyingBoneScript.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Enemies\\FlyingBone\\FlyingBoneScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Gabriel\\Scripts\\Enemies\\FlyingBone\\FlyingBoneScript.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Enemies\\FlyingBone\\FlyingBoneScript.cs",
+              "RelativeToolTip": "Assets\\Gabriel\\Scripts\\Enemies\\FlyingBone\\FlyingBoneScript.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAswBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:25:38.328Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EnemySpawnerScript.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Enemies\\EnemySpawner\\EnemySpawnerScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Gabriel\\Scripts\\Enemies\\EnemySpawner\\EnemySpawnerScript.cs",
+              "ToolTip": "C:\\Users\\gabri\\Documents\\GitHub\\cs383-tl5-platformer\\Assets\\Gabriel\\Scripts\\Enemies\\EnemySpawner\\EnemySpawnerScript.cs",
+              "RelativeToolTip": "Assets\\Gabriel\\Scripts\\Enemies\\EnemySpawner\\EnemySpawnerScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T20:06:40.545Z"
             }
           ]
         }
