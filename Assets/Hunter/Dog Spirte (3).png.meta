@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1112308e72bfb194ab5ca9b5ba231ca7
+guid: 76995a69951a1412b80408c4ab2bb7b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4056058344551517612
-    second: Bone_0
+      213: 6282674816498434323
+    second: Dog Spirte (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bone_0
+      name: Dog Spirte (3)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 220
-        height: 120
+        x: 79
+        y: 79
+        width: 172
+        height: 182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cad804f03930a4830800000000000000
-      internalID: 4056058344551517612
+      spriteID: 3118ea4657b803750800000000000000
+      internalID: 6282674816498434323
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bone_0: 4056058344551517612
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
