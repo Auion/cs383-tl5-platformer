@@ -8,11 +8,13 @@ public class Timer : MonoBehaviour
     private bool isRunning = true;
 
     public float ElapsedTime => elapsedTime; // Public property to get elapsed time
+    public static float timeSurvived = 0f;
 
     void Update()
     {
         if (isRunning)
         {
+            timeSurvived += Time.deltaTime;
             elapsedTime += Time.deltaTime;
             UpdateTimerText();
         }

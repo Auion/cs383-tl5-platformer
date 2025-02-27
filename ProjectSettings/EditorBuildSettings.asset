@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Objects.unity
     guid: faa2f05fe36d89d488d80c88daa4187e
+  - enabled: 1
+    path: Assets/Ben/DiedScreen.unity
+    guid: 5ac4373abf23e794ea3739c5d29c94bd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
