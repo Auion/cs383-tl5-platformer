@@ -17,6 +17,7 @@ public class fishManager : MonoBehaviour
 
     private void OnGUI()
     {
+        GUI.contentColor = Color.red;
         GUI.skin.label.fontSize = 30;
         GUI.Label(new Rect(20, 20, 500, 500), "Fish Num: " + fruitCount);
     }
