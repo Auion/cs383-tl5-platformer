@@ -6,12 +6,26 @@ public class fishManager : MonoBehaviour
 {
     int fruitCount = 0;
 
+    // Player health
+    [SerializeField] GameObject player;
+    private PlayerScript playerScript;
+
+    void Start()
+    {
+        playerScript = player.GetComponent<PlayerScript>();
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Fish")) 
         { 
             Destroy(collision.gameObject);
             fruitCount ++;
+            if (playerScript.health < 9)
+            {
+                playerScript.health += 1;
+            }
         }
     }
 

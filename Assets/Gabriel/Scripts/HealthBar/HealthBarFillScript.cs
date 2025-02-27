@@ -12,6 +12,9 @@ public class HealthBarFill : MonoBehaviour
     {
         playerScript = player.GetComponent<PlayerScript>();
         _rectTransform = GetComponent<RectTransform>();
+        _rectTransform.anchorMin = new Vector2(0, _rectTransform.anchorMin.y);
+        _rectTransform.anchorMax = new Vector2(0, _rectTransform.anchorMax.y);
+        _rectTransform.pivot = new Vector2(0, _rectTransform.pivot.y);
     }
 
     // Update is called once per frame
@@ -22,7 +25,8 @@ public class HealthBarFill : MonoBehaviour
 
     void UpdateHealthBarFill()
     {
-        float BarMovement = 18.88f * (9 - playerScript.health);
-        _rectTransform.anchorMin = new Vector2(BarMovement, _rectTransform.anchorMin.y);
+        float newWidth = playerScript.health / 9f;
+        newWidth *= 173f;
+        _rectTransform.sizeDelta = new Vector2(newWidth, _rectTransform.sizeDelta.y);
     }
 }

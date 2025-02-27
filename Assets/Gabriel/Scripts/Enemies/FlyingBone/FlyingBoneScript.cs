@@ -34,7 +34,7 @@ public class FlyingBone : MonoBehaviour
     {
         float Radians = randomAngle * Mathf.Deg2Rad;
         Vector2 NewDirection = new Vector2(Mathf.Cos(Radians), Mathf.Sin(Radians));
-        _rb.AddForce(NewDirection * 10f, ForceMode2D.Force);
+        _rb.AddForce(NewDirection * 2f, ForceMode2D.Force);
         transform.Rotate(0, 0, rotationSpeed * Time.deltaTime);
         if (transform.position.x > 12 || transform.position.x < -12 || transform.position.y > 18 || transform.position.y < -7)
         {
