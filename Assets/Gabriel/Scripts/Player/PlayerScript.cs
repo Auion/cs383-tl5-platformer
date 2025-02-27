@@ -44,7 +44,6 @@ public class PlayerScript : MonoBehaviour
     // Health 9 lives!
     public float health = 9f;
 
-
     // Sound
     private AudioSource _audioSource;
     [SerializeField] private AudioClip hurt;
