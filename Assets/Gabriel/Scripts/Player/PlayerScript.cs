@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -18,7 +20,7 @@ public class PlayerScript : MonoBehaviour
     private bool isRoofed;
     private bool isRoofedStuck;
     [SerializeField] private float groundCheckDistance = 1f;
-    [SerializeField] private float roofCheckDistance = 1f;
+    [SerializeField] private float roofCheckDistance = 0.8f;
     [SerializeField] private LayerMask groundMask;
 
     // Rigidbody
@@ -42,12 +44,19 @@ public class PlayerScript : MonoBehaviour
     // Health 9 lives!
     private float health = 9f;
 
+    // Sound
+    private AudioSource _audioSource;
+    [SerializeField] private AudioClip hurt;
+    [SerializeField] private AudioClip jump;
+    [SerializeField] private AudioClip walk;
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.freezeRotation = true;
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _boxCollider = GetComponent<BoxCollider2D>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -85,10 +94,11 @@ public class PlayerScript : MonoBehaviour
             }
 
             // Jumping
-            if (Input.GetKey(_jump) && isGrounded)
+            if (Input.GetKeyDown(_jump) && isGrounded)
             {
                 _rb.linearVelocityY = _jumpForce;
                 _energy -= 1500f * Time.deltaTime;
+                _audioSource.PlayOneShot(jump);
             }
 
             // Roof Sticking
@@ -137,6 +147,7 @@ public class PlayerScript : MonoBehaviour
                 _spriteRenderer.sprite = walkSprite1;
             }
             walkTimer = 0f;
+            _audioSource.PlayOneShot(walk);
         }
     }
 
@@ -220,6 +231,7 @@ public class PlayerScript : MonoBehaviour
         {
             Death();
         }
+        _audioSource.PlayOneShot(hurt);
     }
 
     void Death()
