@@ -1905,9 +1905,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 3
-  MaxDistance: 5
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1919,6 +1919,15 @@ AudioSource:
       value: 1
       inSlope: 0
       outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8325028
+      value: 0.54618526
+      inSlope: -1.4248166
+      outSlope: -1.4248166
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -2581,7 +2590,7 @@ Transform:
   m_GameObject: {fileID: 1270393500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.059419848, z: -10}
+  m_LocalPosition: {x: 0, y: 0.05999985, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
