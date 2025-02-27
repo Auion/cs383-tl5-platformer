@@ -1681,7 +1681,7 @@ GameObject:
   - component: {fileID: 665090899}
   m_Layer: 0
   m_Name: Patrolling Dog
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2581,7 +2581,7 @@ Transform:
   m_GameObject: {fileID: 1270393500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.059999857, z: -10}
+  m_LocalPosition: {x: 0, y: 0.059419848, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3219,7 +3219,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.1017642, y: 1}
+  m_Size: {x: 0.1017642, y: 1.0015898}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3234,7 +3234,7 @@ Transform:
   m_GameObject: {fileID: 1517313386}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.11, y: 6.02, z: 1}
+  m_LocalPosition: {x: -9.11, y: 6.0033, z: 1}
   m_LocalScale: {x: 19.6, y: 21, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3251,7 +3251,7 @@ GameObject:
   - component: {fileID: 1662050557}
   - component: {fileID: 1662050556}
   m_Layer: 0
-  m_Name: Rigth Cat Tower
+  m_Name: Right Cat Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3306,7 +3306,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.1017642, y: 1}
+  m_Size: {x: 0.1017642, y: 1.003125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -3321,7 +3321,7 @@ Transform:
   m_GameObject: {fileID: 1662050555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.21, y: 6.05, z: 1}
+  m_LocalPosition: {x: 9.21, y: 6.0172, z: 1}
   m_LocalScale: {x: 19.6, y: 21, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3361,7 +3361,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 473}
+  m_AnchoredPosition: {x: 0, y: 400}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679347172
@@ -3617,6 +3617,7 @@ GameObject:
   - component: {fileID: 1751427251}
   - component: {fileID: 1751427254}
   - component: {fileID: 1751427255}
+  - component: {fileID: 1751427256}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3712,7 +3713,7 @@ MonoBehaviour:
   _sleep: 115
   _maxSpeed: 4.93
   _jumpForce: 12
-  groundCheckDistance: 1
+  groundCheckDistance: 0.8
   roofCheckDistance: 1
   groundMask:
     serializedVersion: 2
@@ -3722,6 +3723,9 @@ MonoBehaviour:
   sleepSprite: {fileID: 5606590905928436505, guid: c71637dca4711c84c88f683d8edff7b7, type: 3}
   _energy_max: 60000
   _energy: 60000
+  hurt: {fileID: 8300000, guid: a971d34a6d6a0604fbd78172ac6e67b9, type: 3}
+  jump: {fileID: 8300000, guid: 326a853c36a60614c95c3c0c78ffddb9, type: 3}
+  walk: {fileID: 8300000, guid: b9393f0d20894254787789dc4c1dc3a4, type: 3}
 --- !u!50 &1751427252
 Rigidbody2D:
   serializedVersion: 5
@@ -3816,6 +3820,103 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751427248}
   m_Enabled: 1
+--- !u!82 &1751427256
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751427248}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1894479012
 GameObject:
   m_ObjectHideFlags: 0
