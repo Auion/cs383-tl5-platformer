@@ -42,13 +42,16 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float _energy = 60000f;
 
     // Health 9 lives!
-    private float health = 9f;
+    public float health = 9f;
 
     // Sound
     private AudioSource _audioSource;
     [SerializeField] private AudioClip hurt;
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip walk;
+
+    // GameOver
+    public bool gameOver = false;
 
     void Start()
     {
@@ -61,12 +64,15 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        PlayerMovement();
-        IsGrounded();
-        IsRoofed();
-        Warp();
-        EnergyDrain();
-        EnergyRestore();
+        if ( gameOver == false)
+        {
+            PlayerMovement();
+            IsGrounded();
+            IsRoofed();
+            Warp();
+            EnergyDrain();
+            EnergyRestore();
+        }
     }
 
     void PlayerMovement()
@@ -224,6 +230,14 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            TakeDamage();
+        }
+    }
+
     void TakeDamage()
     {
         health -= 1;
@@ -231,11 +245,25 @@ public class PlayerScript : MonoBehaviour
         {
             Death();
         }
-        _audioSource.PlayOneShot(hurt);
+        _audioSource.PlayOneShot(hurt, 2.5f);
+        _rb.linearVelocityY = 2f;
+        GoRed();
+    }
+
+    void GoRed()
+    {
+        _spriteRenderer.color = Color.red;
+        Invoke("UndoRed", 0.2f);
+    }
+
+    void UndoRed()
+    {
+        _spriteRenderer.color = Color.white;
     }
 
     void Death()
     {
-        Destroy(gameObject);
+        gameOver = true;
+        _spriteRenderer.enabled = false;
     }
 }

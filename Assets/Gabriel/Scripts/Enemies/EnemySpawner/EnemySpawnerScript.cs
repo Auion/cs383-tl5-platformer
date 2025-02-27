@@ -23,7 +23,7 @@ public class EnemySpawnerScript : MonoBehaviour
         {
             SpawnPoint = new Vector2((Random.Range(0f, 1f) > 0.5f) ? Random.Range(-12f, -11f) : Random.Range(11f, 12f), Random.Range(-7f, 18f));
             GameObject asteroidInstance = Instantiate(FlyingBonePrefab, SpawnPoint, Quaternion.identity);
-            Invoke("SpawnFlyingBone", Random.Range(0f, 1f));
+            Invoke("SpawnFlyingBone", Random.Range(0f, 0.5f));
         }
     }
 }
