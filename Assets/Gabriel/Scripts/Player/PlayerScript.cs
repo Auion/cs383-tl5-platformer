@@ -49,6 +49,8 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private AudioClip hurt;
     [SerializeField] private AudioClip jump;
     [SerializeField] private AudioClip walk;
+    [SerializeField] private AudioClip pickup;
+    [SerializeField] private AudioClip sleep;
 
     // GameOver
     public bool gameOver = false;
@@ -72,6 +74,7 @@ public class PlayerScript : MonoBehaviour
             Warp();
             EnergyDrain();
             EnergyRestore();
+            transform.position = new Vector3(transform.position.x, transform.position.y, -4f);
         }
     }
 
@@ -200,7 +203,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     void EnergyRestore()
-{  
+{
         if (_energy < _energy_max && _spriteRenderer.sprite == sleepSprite)
         {
             _energy += 20000f * Time.deltaTime;
@@ -236,6 +239,11 @@ public class PlayerScript : MonoBehaviour
         {
             TakeDamage();
         }
+    }
+
+    public void PickupSound()
+    {
+        _audioSource.PlayOneShot(pickup);
     }
 
     void TakeDamage()

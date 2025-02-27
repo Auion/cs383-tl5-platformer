@@ -65,7 +65,7 @@ public class GroundMovement : MonoBehaviour
             _rb.linearVelocityY = _jumpForce;
         }
 
-        if ((angleDegrees > 50 && angleDegrees < 130) || (angleDegrees > 230 && angleDegrees < 310))
+        if ((angleDegrees > 50 && angleDegrees < 130) || (angleDegrees < -50 && angleDegrees > -130))
         {
             stuck += 1 * Time.deltaTime;
             if (stuck > 1.5f)

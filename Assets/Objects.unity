@@ -3627,6 +3627,8 @@ GameObject:
   - component: {fileID: 1751427255}
   - component: {fileID: 1751427256}
   - component: {fileID: 1751427257}
+  - component: {fileID: 1751427258}
+  - component: {fileID: 1751427259}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3736,6 +3738,8 @@ MonoBehaviour:
   hurt: {fileID: 8300000, guid: a971d34a6d6a0604fbd78172ac6e67b9, type: 3}
   jump: {fileID: 8300000, guid: 326a853c36a60614c95c3c0c78ffddb9, type: 3}
   walk: {fileID: 8300000, guid: b9393f0d20894254787789dc4c1dc3a4, type: 3}
+  pickup: {fileID: 8300000, guid: 680441c456b2be1459d56776b67dcf9c, type: 3}
+  sleep: {fileID: 8300000, guid: 5c2802028ace80f4781fe642b47dbac3, type: 3}
   gameOver: 0
 --- !u!50 &1751427252
 Rigidbody2D:
@@ -3941,6 +3945,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1751427248}
+--- !u!114 &1751427258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751427248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35d1263d0664c94eac527d1c4579dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1751427259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751427248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c686dc9574824841a405db34ce1768b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!1 &1894479012
 GameObject:
   m_ObjectHideFlags: 0

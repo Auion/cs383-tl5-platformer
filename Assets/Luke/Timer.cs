@@ -3,30 +3,30 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public TextMeshProUGUI timerText; // Reference to UI Text
     private float elapsedTime = 0f;
-    private bool isRunning = true;
 
     public float ElapsedTime => elapsedTime; // Public property to get elapsed time
 
+    public string timer = "0";
+
     void Update()
     {
-        if (isRunning)
-        {
-            elapsedTime += Time.deltaTime;
-            UpdateTimerText();
-        }
+        elapsedTime += Time.deltaTime;
+        UpdateTimerText();
     }
 
     void UpdateTimerText()
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
         int seconds = Mathf.FloorToInt(elapsedTime % 60);
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        timer = $"{minutes:00}:{seconds:00}";
     }
 
-    public void StopTimer()
+    private void OnGUI()
     {
-        isRunning = false; // Stop the timer
+        GUI.contentColor = Color.red;
+        GUI.skin.label.fontSize = 30;
+        GUI.Label(new Rect(20, 80, 500, 500), "Time Survived: " + timer);
+        PlayerPrefs.SetString("Time", timer);
     }
 }

@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class DeathWatcher : MonoBehaviour
 {
-    
     void Update()
     {
         PlayerScript player = FindAnyObjectByType<PlayerScript>();

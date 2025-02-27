@@ -22,6 +22,7 @@ public class fishManager : MonoBehaviour
         { 
             Destroy(collision.gameObject);
             fruitCount ++;
+            playerScript.PickupSound();
             if (playerScript.health < 9)
             {
                 playerScript.health += 1;
@@ -33,6 +34,6 @@ public class fishManager : MonoBehaviour
     {
         GUI.contentColor = Color.red;
         GUI.skin.label.fontSize = 30;
-        GUI.Label(new Rect(20, 20, 500, 500), "Fish Num: " + fruitCount);
+        GUI.Label(new Rect(20, 20, 500, 500), "Fish Eaten: " + fruitCount);
     }
 }
