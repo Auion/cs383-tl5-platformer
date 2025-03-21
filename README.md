@@ -2,5 +2,16 @@ Dr. BC One Drive link: https://vandalsuidaho-my.sharepoint.com/personal/jbeeston
 
 TL5 Presentation Slides:
 1. AI Introduction:
+Jonathan
+Pramil
+Nate
+Hunter
+
 2. Dynamic Binding: https://vandalsuidaho-my.sharepoint.com/:p:/g/personal/tian6555_vandals_uidaho_edu/EQ-dmexKpQtNsT9vj_MelfQB6ufNMV4CTNdg0mFiYTZQBw?e=BjKPKB
+Hengyi
+Ben
+Gabriel
+Luke
+
 4. Ethics quiz:
+Aneesha
