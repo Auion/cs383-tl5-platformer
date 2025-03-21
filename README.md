@@ -2,5 +2,5 @@ Dr. BC One Drive link: https://vandalsuidaho-my.sharepoint.com/personal/jbeeston
 
 TL5 Presentation Slides:
 1. AI Introduction:
-2. Dynamic Binding: https://vandalsuidaho-my.sharepoint.com/:p:/r/personal/tian6555_vandals_uidaho_edu/_layouts/15/Doc.aspx?sourcedoc=%7BEC999D0F-A54A-4D0B-B13F-6F8FF31E95F4%7D&file=v1.0_TL5%20Presentation.pptx&action=edit&mobileredirect=true&wdOrigin=OUTLOOK-METAOS.FILEBROWSER
-3. Ethics quiz:
+2. Dynamic Binding: https://vandalsuidaho-my.sharepoint.com/:p:/g/personal/tian6555_vandals_uidaho_edu/EQ-dmexKpQtNsT9vj_MelfQB6ufNMV4CTNdg0mFiYTZQBw?e=BjKPKB
+4. Ethics quiz:
