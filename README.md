@@ -9,6 +9,4 @@ TL5 Presentation:
 
 
 
-Video Clips:
-
-https://vandalsuidaho-my.sharepoint.com/:f:/g/personal/tian6555_vandals_uidaho_edu/EkTATuJyWsFNp8dhVm7r5g0BzRt8telzlVhxXAbw1DVU5Q?e=npeoMh
+All Video Clips: https://vandalsuidaho-my.sharepoint.com/:f:/g/personal/tian6555_vandals_uidaho_edu/EkTATuJyWsFNp8dhVm7r5g0BzRt8telzlVhxXAbw1DVU5Q?e=npeoMh
